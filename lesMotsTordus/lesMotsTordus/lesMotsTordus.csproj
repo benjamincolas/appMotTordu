@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C0E61F2E-40CD-404D-814B-C46E13E19E3C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>lesMotsTordus</RootNamespace>
+    <AssemblyName>lesMotsTordus</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\DLLs\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassLibrary">
+      <HintPath>..\DLLs\ClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\DLLs\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\DLLs\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\DLLs\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmGestionAuteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionAuteur.Designer.cs">
+      <DependentUpon>frmGestionAuteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionEmprunteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionEmprunteur.Designer.cs">
+      <DependentUpon>frmGestionEmprunteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConnexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnexion.Designer.cs">
+      <DependentUpon>frmConnexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionCompteUtilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionCompteUtilisateur.Designer.cs">
+      <DependentUpon>frmGestionCompteUtilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionEditeur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionEditeur.Designer.cs">
+      <DependentUpon>frmGestionEditeur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionGeneral.Designer.cs">
+      <DependentUpon>frmGestionGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionLivres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionLivres.Designer.cs">
+      <DependentUpon>frmGestionLivres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModifierCouv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModifierCouv.Designer.cs">
+      <DependentUpon>frmModifierCouv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmGestionAuteur.resx">
+      <DependentUpon>frmGestionAuteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionEmprunteur.resx">
+      <DependentUpon>frmGestionEmprunteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConnexion.resx">
+      <DependentUpon>frmConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionCompteUtilisateur.resx">
+      <DependentUpon>frmGestionCompteUtilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionEditeur.resx">
+      <DependentUpon>frmGestionEditeur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionGeneral.resx">
+      <DependentUpon>frmGestionGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionLivres.resx">
+      <DependentUpon>frmGestionLivres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModifierCouv.resx">
+      <DependentUpon>frmModifierCouv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acceuille.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajouter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\auteur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\couverture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fermer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invisible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\livre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\non.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parametre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poubelle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recharger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recherche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sortie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\utilisateur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editeur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emprunteur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emprunteur_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\auteur_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\auteur_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\couv_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\couv_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editeur_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editeur_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emprunteur_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\livre_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\livre_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\utilisateur_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\utilisateur_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\kisspng-computer-icons-broom-cleaning-clip-art-clean-5ac7b8a6e3e787.4112787415230383749335.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
